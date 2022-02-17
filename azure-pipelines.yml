@@ -19,9 +19,3 @@ jobs:
     displayName: 'dotnet build'
   - script: ./run-tests.sh
     displayName: 'run tests'
-  - task: PublishTestResults@2
-    displayName: 'Publish Test Results **/*.trx'
-    condition: succeededOrFailed()
-    inputs:
-      testResultsFormat: VSTest
-      testResultsFiles: '**/*.trx' 
